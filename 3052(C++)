@@ -1,0 +1,27 @@
+#include <iostream>
+#include <sstream>
+#include <algorithm> 
+using namespace std;
+
+
+
+int main(){
+    int n[10],cnt=0;
+    bool re[42] = {false};
+    for(int i = 0; i < 10; i++){
+        cin >> n[i];
+        n[i] = n[i] % 42;
+        re[n[i]] = true;
+
+
+    }
+    for(int i = 0; i < 42; i++){
+        if(re[i]){
+            cnt++;
+        }
+    }
+    cout << cnt << "\n";
+
+    
+    return 0;
+}  
