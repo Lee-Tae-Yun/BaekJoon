@@ -1,0 +1,25 @@
+#include <iostream>
+#include <sstream>
+#include <algorithm> 
+using namespace std;
+
+
+
+int main(){
+    int n,m,x,y,i,j,k;
+    cin >> n >> m;
+    int *ba = new int[n]();
+    for(int x = 0; x < m; x++){
+        cin >> i >> j >> k;
+        for(int y = i-1; y < j; y++){
+            ba[y] = k;
+        }
+    }
+    for(int z = 0; z < n; z++){
+        cout << ba[z] <<" ";
+    }
+    cout << "\n";
+
+    delete[] ba;
+    return 0;
+}  
