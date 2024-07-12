@@ -1,0 +1,25 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String t = br.readLine();
+        int tt = Integer.parseInt(t);
+
+        for(int i = 0; i < tt; i++) {
+            String line = br.readLine();
+            String[] toline = line.split(" ");
+            int rap = Integer.parseInt(toline[0]);
+            String value = toline[1];
+            for(int j = 0; j < value.length(); j++){
+                for (int z = 0; z < rap; z++){
+                    System.out.print(value.charAt(j));
+                }
+            }
+            System.out.println();
+        }
+
+    }
+}
